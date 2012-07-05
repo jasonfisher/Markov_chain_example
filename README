@@ -1,0 +1,19 @@
+I created this code in response to a programming quiz I received for a job application.  It is a simple implementation of a Markov chain.
+
+The problem became interesting and fun and seemed cleverly designed, as the instructions in the README were vague (on purpose).  
+For starters, the example 'sentence' produced isn't really a sentence, grammatically speaking, but rather a walk across the Markov chain.  
+Also, while the underlying weighted directed graph implementation suggested by the stubs looked plausible, I figured the simpler thing to do would be to find an existing Markov chain ruby library online.  
+To my surprise, I had trouble finding one at that time, so I decided to create a simple Markov chain implementation using a hash of arrays.   
+I tested with the README usage instructions 'ruby generate.rb source/frankenstein.txt' and it seems to create a valid random Markov chain walk from any start node.  
+Note that sentences can only be ended by words that ended sentences in the original text so sometimes the sentences can get pretty long.
+
+The original setup can still be found at:
+http://github.com/eandrejko/text-dynamo
+
+Usage
+To generate text using seed data from the input file:
+
+ruby generate.rb source/frankenstein.txt
+Which will generate a Markov chain from the input text and produce a randomly generated sentence.  E.g.:
+
+Nearly all that I quitted your triumph over which ran through the cause of the hue of the reverse of the permission to bid a superior to speak.
